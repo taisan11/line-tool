@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "line-tool",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,8 +8,7 @@
     "tonnel": "untun tunnel http://localhost:5173"
   },
   "dependencies": {
-    "@line/liff": "2.23.2",
-    "hono": "^4.0.10"
+    "@line/liff": "2.23.2"
   },
   "devDependencies": {
     "@typescript/lib-dom": "npm:@types/web",
