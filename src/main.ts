@@ -10,6 +10,7 @@ window.onload = async () => {
   // ログインしていない場合はログイン画面にリダイレクト
   if (!liff.isLoggedIn()) {
     liff.login();
+    console.log('ログインしていません');
     return;
   }
   // ユーザー情報の取得
