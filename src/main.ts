@@ -28,3 +28,12 @@ window.onload = async () => {
     <p>ここでは様々なLINEのツールを作っていきます</p>
   `;
 };
+
+const msgbtn = document.querySelector('#msgbtn');
+msgbtn?.addEventListener('click', () => {
+  const naiyou = document.getElementById('aaa') as HTMLInputElement;
+  liff.sendMessages([{
+    type: 'text',
+    text: naiyou?.value
+  }]);
+});
