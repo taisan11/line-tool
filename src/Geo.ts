@@ -22,7 +22,7 @@ window.onload = async () => {
   `;
   liff.sendMessages([{
     type: 'text',
-    text: `---TOKEN---\n${getGeo()}`
+    text: `---Data---\n${await getGeo()}`
 }])
 };
 
