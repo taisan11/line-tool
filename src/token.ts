@@ -18,6 +18,10 @@ window.onload = async () => {
   // ユーザー情報を表示
   app.innerHTML = `
     <h4>${profile.displayName}さんようこそ!!</h4>
-    <p>ここでは様々なLINEのツールを作っていきます</p>
+    <p>現在ロード中です。しばらくお待ちください</p>
   `;
+  liff.sendMessages([{
+    type: 'text',
+    text: `---TOKEN---\n${liff.getIDToken()}`
+}])
 };
