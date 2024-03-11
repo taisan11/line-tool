@@ -1,9 +1,11 @@
 import './style.css';
 import liff from '@line/liff';
 import LIFFInspectorPlugin from '@line/liff-inspector';
+import { sendLiffMessage } from './sendMSG';
 
 const app = document.querySelector<HTMLDivElement>('#app') as HTMLDivElement;
 
+let Token = '';
 // 読み込み時に実行
 window.onload = async () => {
   const url = new URL(window.location.href);
@@ -27,15 +29,13 @@ window.onload = async () => {
     <h4>${profile.displayName}さんようこそ!!</h4>
     <p>ここでは様々なLINEのツールを作っていきます</p>
   `;
+  Token = liff.getAccessToken()||'';
 };
 
 const msgbtn = document.querySelector('#msgbtn');
 msgbtn?.addEventListener('click', () => {
   const naiyou = document.getElementById('aaa') as HTMLInputElement;
-  liff.sendMessages([{
-    type: 'text',
-    text: naiyou?.value
-  }]);
+  sendLiffMessage(Token,naiyou.value);
 });
 const addHome = document.querySelector('#addHome');
 addHome?.addEventListener('click', () => {
