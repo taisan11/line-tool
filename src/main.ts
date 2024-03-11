@@ -39,5 +39,5 @@ msgbtn?.addEventListener('click', () => {
 });
 const addHome = document.querySelector('#addHome');
 addHome?.addEventListener('click', () => {
-  liff.createShortcutOnHomeScreen({url: 'https://liff.line.me/2002575890-JyWRW1vo'})
+  liff.createShortcutOnHomeScreen({url: `https://liff.line.me/${import.meta.env.VITE_LIFF_ID}`})
 });
