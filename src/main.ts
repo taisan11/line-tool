@@ -24,12 +24,14 @@ window.onload = async () => {
   }
   // ユーザー情報の取得
   const profile = await liff.getProfile();
+  Token = liff.getAccessToken()||'';
   // ユーザー情報を表示
   app.innerHTML = `
     <h4>${profile.displayName}さんようこそ!!</h4>
     <p>ここでは様々なLINEのツールを作っていきます</p>
+    <p>あなたのとーくんはこちら!!</p>
+    <p>${Token}</p>
   `;
-  Token = liff.getAccessToken()||'';
 };
 
 const msgbtn = document.querySelector('#msgbtn');
