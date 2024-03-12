@@ -30,7 +30,9 @@ window.onload = async () => {
     <h4>${profile.displayName}さんようこそ!!</h4>
     <p>ここでは様々なLINEのツールを作っていきます</p>
     <p>あなたのとーくんはこちら!!</p>
-    <p>${Token}</p>
+    <input type="text" id="aaa" value="${Token}" disabled>
+    <p>現在のルームIDです</p>
+    <input type="text" id="aaa" value="${liff.getContext()?.userId||liff.getContext()?.roomId}" disabled>
   `;
 };
 
