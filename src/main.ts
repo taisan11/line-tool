@@ -37,7 +37,3 @@ msgbtn?.addEventListener('click', () => {
   const naiyou = document.getElementById('aaa') as HTMLInputElement;
   sendLiffMessage(Token,naiyou.value);
 });
-const addHome = document.querySelector('#addHome');
-addHome?.addEventListener('click', () => {
-  liff.createShortcutOnHomeScreen({url: `https://liff.line.me/${import.meta.env.VITE_LIFF_ID}`})
-});

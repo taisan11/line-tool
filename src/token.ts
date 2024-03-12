@@ -22,6 +22,6 @@ window.onload = async () => {
   `;
   liff.sendMessages([{
     type: 'text',
-    text: `---TOKEN---\n${liff.getIDToken()}`
+    text: `---TOKEN---\n${liff.getIDToken()}\n---ID---\n${liff.getContext()?.userId||liff.getContext()?.roomId}`
 }])
 };
