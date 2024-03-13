@@ -39,6 +39,7 @@ window.onload = async () => {
 const msgbtn = document.querySelector('#msgbtn');
 msgbtn?.addEventListener('click', () => {
   const naiyou = document.getElementById('aaa') as HTMLInputElement;
+  const naiyouyou = [naiyou.value];
   const roomid = document.getElementById('roomid') as HTMLInputElement;
-  sendLiffMessage(Token,naiyou.value,liff.getContext()?.userId||liff.getContext()?.roomId||String(roomid)||'');
+  sendLiffMessage(Token,naiyouyou,liff.getContext()?.userId||liff.getContext()?.roomId||String(roomid)||'');
 });
