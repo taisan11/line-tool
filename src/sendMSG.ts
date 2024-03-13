@@ -22,7 +22,7 @@ export async function sendLiffMessage(
         "x-requested-with": "jp.naver.line.android",
       },
       referrerPolicy: "strict-origin-when-cross-origin",
-      body: JSON.stringify({bodyObject}),
+      body: JSON.stringify(bodyObject),
       method: "POST",
       mode: "cors",
       credentials: "omit",
