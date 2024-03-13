@@ -1,13 +1,8 @@
 export async function sendLiffMessage(
     token: string,
     objects: any,
-    to?: string
+    to: string
   ): Promise<boolean> {
-    let bodyObject:{messages:any,to?:any} = { messages: objects };
-
-    if (to) {
-      bodyObject.to = to;
-    }
     fetch("https://api.line.me/message/v3/share", {
       headers: {
         accept: "application/json",
@@ -22,7 +17,7 @@ export async function sendLiffMessage(
         "x-requested-with": "jp.naver.line.android",
       },
       referrerPolicy: "strict-origin-when-cross-origin",
-      body: JSON.stringify(bodyObject),
+      body: JSON.stringify({'to': to, 'messages': objects}),
       method: "POST",
       mode: "cors",
       credentials: "omit",
