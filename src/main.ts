@@ -41,5 +41,5 @@ msgbtn?.addEventListener('click', () => {
   const naiyou = document.getElementById('aaa') as HTMLInputElement;
   const naiyouyou = [{type: "text",text:naiyou.value}];
   const roomid = document.getElementById('roomid') as HTMLInputElement;
-  sendLiffMessage(Token,naiyouyou,liff.getContext()?.userId||liff.getContext()?.roomId||String(roomid)||'');
+  sendLiffMessage(Token,naiyouyou,String(roomid)||liff.getContext()?.userId||liff.getContext()?.roomId||'');
 });
